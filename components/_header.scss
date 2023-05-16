@@ -1,0 +1,217 @@
+.header{
+    position: relative;
+    box-shadow: 1px 3px rgba(0,0,0,.1),0 2px 2px rgba(0,0,0,.06),0 0 2px rgba(0,0,0,.07);
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .branding{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        img{
+            width: 4rem;
+        }
+
+        ul{
+            display: none;
+        }
+    }
+
+    &__btn{
+        display: none;
+    }
+
+    &__nav{
+        z-index: 999;
+        background: $clr-light;
+        position: absolute;
+        top: 7rem;
+        left: -100rem;
+        width: 80%;
+        height: 100vh;
+        transition: .5s ease;
+
+        &.open{
+            left: 0rem;
+            transition: .5s ease;
+            padding: 2rem 3rem;
+        }
+    }
+
+    &__navtext{
+        font-size: 1.5rem;
+        margin-right: 3rem;
+
+        a{
+            color: $clr-dark;
+            font-size: 1.5rem;
+            font-weight: 600; 
+            &:hover{
+                color: $clr-green;
+            }
+        }
+
+        i{
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__text{
+        ul{
+            border-bottom: 1px solid $clr-gray;
+            padding: 2rem 0;
+            
+            li{
+                i{
+                    margin-left: 26rem;
+                }
+            
+                &:nth-child(2){
+                    margin: 2rem 0;
+                }
+
+                &:last-child{
+                    margin-bottom: 2rem;
+                }
+
+                a{
+                    font-size: 2rem;
+                    color: $clr-dark;
+                }
+            }
+        }
+    }
+
+    &__actions{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    &__buttons{
+        ul{
+            padding: 2rem 0;
+
+            a{
+                font-size: 1.5rem;
+                color: $clr-gray;
+                margin-right: 1.5rem;
+
+                &:last-child{
+                    color: $clr-light;
+                }
+            }
+        }
+    }
+
+    .toggle__menu{
+        border-radius: 5rem;
+        padding: 1rem 1rem;
+    
+       &:hover{
+        cursor: pointer;
+        border-radius: 5rem;
+        padding: 1rem 1rem;
+        background: rgba(118, 118, 118, 0.1);
+      }
+    
+      span{
+        width: 2rem;
+        height: .2rem;
+        background-color: #333;
+        display: block;
+        border-radius: 5rem;
+        transition: .5s ease;
+
+        &:nth-child(2){
+            margin: .5rem 0;
+        }
+      }
+
+      &.open{
+        span{
+            &:first-child{
+                transform: translate(0, 9px) rotate(230deg);
+                transition: .5s ease-in;
+            }
+
+            &:nth-child(2){
+                opacity: 0;
+                transition: .5s ease-in;
+            }
+
+            &:last-child{
+                transform: translate(0, -5px) rotate(-230deg);
+                transition: .5s ease-in;  
+            }
+        }
+      }
+    }
+
+    @include mediaQuery($break-lg){
+        &__nav, .toggle__menu{
+            display: none;
+        }
+
+        &__btn{
+            display: unset;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .branding{
+            img{
+                width: 5rem;
+            }
+
+            ul{
+                display: unset;
+                display: flex;
+                align-items: center;
+            }
+
+            li{
+                margin-right: 3rem;
+
+                a{
+                    color: $clr-dark;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+                &:hover{
+                    a{
+                        color: $clr-green;
+                    }
+                }
+            }
+        }
+
+        &__actions{
+            display: none;
+        }
+
+        &__navtext{
+            font-size: 1.5rem;
+            margin-right: 5rem;
+    
+            a{
+                color: $clr-dark;
+                font-size: 1.5rem;
+                font-weight: 600; 
+
+                &:hover{
+                    color: $clr-green;
+                }
+            }
+        }
+    }
+}

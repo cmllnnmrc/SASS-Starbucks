@@ -1,0 +1,74 @@
+$clr-dark: hsl(0, 0%, 20%);
+$clr-green: hsl(159, 100%, 19%);
+$clr-d-green: hsl(164, 31%, 17%);
+$clr-l-green: hsl(166.15,38.24%,86.67%);
+$clr-gray: hsl(0, 0%, 46%);
+$clr-d-gray: hsl(0,0%,26.27%);
+$clr-light: hsl(0, 0%, 100%);
+$clr-d-light: hsl(42.86,21.21%,93.53%);
+$clr-transparent: transparent;
+
+$break-sm: 500px;
+$break-md: 768px;
+$break-lg: 1080px;
+$break-xl: 1920px;
+
+.btn{
+  display: inline-block;  
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+}
+
+.btn.black{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #000000;
+  border: 1px solid #000000;
+}
+
+.btn.black:hover{
+  background: hsl(0, 0%, 46%);
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.btn.green{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: $clr-green;
+  border: 1px solid $clr-green;
+}
+
+.btn.green:hover{
+  background: rgb(0, 97, 63, .9);
+  color: #ffffff;
+}
+
+.btn.shallow-white{
+  font-size: 1.5rem;
+  padding: .8rem 1.5rem;
+  font-weight: 600;
+  color: $clr-light;
+  background: transparent;
+  border: 1px solid $clr-light;
+}
+
+.btn.shallow-white:hover{
+  background: rgba(0,0,0,.2);
+  color: #ffffff;
+}
+
+.btn.trans{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 46%);
+  border: 1px solid #000000;
+}
+
+.btn.trans:hover{
+  background: rgb(117, 117, 117, .2);
+  color: hsl(0, 0%, 46%);
+  border: 1px solid #000000;
+}
