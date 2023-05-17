@@ -28,3 +28,11 @@ function removeActiveContent() {
     star.classList.remove("active");
   });
 }
+
+const links = document.querySelectorAll(".links__item h4");
+links.forEach((down) => {
+  down.addEventListener("click", () => {
+    down.nextElementSibling.classList.toggle("open");
+    down.querySelector("i").classList.toggle("open");
+  });
+});
