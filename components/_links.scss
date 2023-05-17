@@ -11,11 +11,17 @@
         margin: 0 auto;
         padding: 2rem 1.5rem;
 
+        &:first-child{
+            margin-top: 3rem;
+        }
+
         h4{
             color: $clr-d-gray;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 2rem;
+            cursor: pointer;
 
             i{
                 transition: .5s ease;
@@ -42,7 +48,7 @@
                 &:hover{
                     cursor: pointer;
                     a{
-                        color: $clr-green;
+                        color: $clr-dark;
                     }
                 }
                 a{

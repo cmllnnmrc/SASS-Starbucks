@@ -7,6 +7,7 @@
     background-position-y: 45rem;
     background-position-x: 20rem;
     text-align: center;
+    padding-top: 7rem;
 
     &__rewards{
         background: $clr-d-green;
@@ -218,6 +219,7 @@
 }
 
 .coffee{
+    position: relative;
     &__nav{
         background: #F1F8F5;
         padding-top: 5rem;

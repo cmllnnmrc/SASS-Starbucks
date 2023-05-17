@@ -88,9 +88,63 @@ body {
   padding: 1.5rem;
 }
 
+.footer {
+  background-color: hsl(0, 0%, 100%);
+}
+.footer__wrapper .footer__social ul {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.footer__wrapper .footer__social ul li a {
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  background: rgb(10, 10, 10);
+  padding: 1.5rem;
+  border-radius: 5rem;
+  width: 4.5rem;
+  text-align: center;
+}
+.footer__text {
+  display: block;
+}
+.footer__text .privacy ul {
+  display: block;
+}
+.footer__text .privacy ul li {
+  margin-bottom: 2rem;
+}
+.footer__text .privacy ul li a {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.footer__text .privacy ul li:hover a {
+  -webkit-text-decoration: underline rgb(92, 84, 84);
+          text-decoration: underline rgb(92, 84, 84);
+}
+.footer__text p {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 1080px) {
+  .footer__text {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__text .privacy ul {
+    display: flex;
+  }
+  .footer__text .privacy ul li {
+    margin-right: 2rem;
+    margin-bottom: unset;
+  }
+}
+
 .header {
   position: relative;
+  width: 100%;
+  position: fixed;
   box-shadow: 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+  background: #ffffff;
 }
 .header__wrapper {
   display: flex;
@@ -112,17 +166,16 @@ body {
   display: none;
 }
 .header__nav {
-  z-index: 999;
   background: hsl(0, 0%, 100%);
   position: absolute;
-  top: 7rem;
-  left: -100rem;
+  top: 7.2rem;
+  right: -100rem;
   width: 80%;
   height: 100vh;
   transition: 0.5s ease;
 }
 .header__nav.open {
-  left: 0rem;
+  right: 0;
   transition: 0.5s ease;
   padding: 2rem 3rem;
 }
@@ -267,11 +320,16 @@ body {
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
+.links__item:first-child {
+  margin-top: 3rem;
+}
 .links__item h4 {
   color: hsl(0, 0%, 26.27%);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
+  cursor: pointer;
 }
 .links__item h4 i {
   transition: 0.5s ease;
@@ -296,7 +354,7 @@ body {
   cursor: pointer;
 }
 .links__item ul li:hover a {
-  color: hsl(159, 100%, 19%);
+  color: hsl(0, 0%, 20%);
 }
 .links__item ul li a {
   color: hsl(0, 0%, 20%);
@@ -312,6 +370,7 @@ body {
   background-position-y: 45rem;
   background-position-x: 20rem;
   text-align: center;
+  padding-top: 7rem;
 }
 .banner__rewards {
   background: hsl(164, 31%, 17%);
@@ -467,6 +526,9 @@ body {
   }
 }
 
+.coffee {
+  position: relative;
+}
 .coffee__nav {
   background: #F1F8F5;
   padding-top: 5rem;
