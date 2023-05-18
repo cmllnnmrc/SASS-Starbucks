@@ -61,6 +61,10 @@
 
     &__text{
         padding-top: 10rem;
+
+        h1{
+            font-size: 3.5rem;
+        }
     }
 
     @include mediaQuery($break-lg){
@@ -174,6 +178,10 @@
         a{
             color: $clr-green;
             text-decoration: underline;
+
+            &:hover{
+                text-decoration: none;
+            }
         }
     }
 

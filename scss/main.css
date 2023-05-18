@@ -91,7 +91,7 @@ body {
 .footer__social ul {
   display: flex;
   align-items: center;
-  border-top: 1px solid hsl(0, 0%, 20%);
+  border-top: 1px solid rgba(117, 117, 117, 0.2);
   padding: 5rem 0;
 }
 .footer__social ul li {
@@ -132,7 +132,7 @@ body {
     align-items: center;
   }
   .footer__nav ul li:not(:first-child) {
-    border-left: 2px solid hsl(0, 0%, 20%);
+    border-left: 2px solid hsl(0, 0%, 46%);
   }
   .footer__nav ul li:not(:first-child) a {
     padding: 0 2rem;
@@ -316,7 +316,7 @@ body {
   padding-top: 5rem;
 }
 .links__wrapper {
-  border-top: 1px solid hsl(0, 0%, 26.27%);
+  border-top: 1px solid rgba(117, 117, 117, 0.2);
 }
 .links__content {
   max-width: 150rem;
@@ -372,7 +372,8 @@ body {
 }
 @media screen and (min-width: 1080px) {
   .links__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .links__item {
     padding-right: 8rem;
@@ -444,6 +445,9 @@ body {
 }
 .banner__text {
   padding-top: 10rem;
+}
+.banner__text h1 {
+  font-size: 3.5rem;
 }
 @media screen and (min-width: 1080px) {
   .banner {
@@ -531,6 +535,9 @@ body {
 .reward-steps__text a {
   color: hsl(159, 100%, 19%);
   text-decoration: underline;
+}
+.reward-steps__text a:hover {
+  text-decoration: none;
 }
 @media screen and (min-width: 1080px) {
   .reward-steps__wrapper {

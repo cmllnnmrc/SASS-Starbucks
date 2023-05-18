@@ -2,7 +2,7 @@
     padding-top: 5rem;
 
     &__wrapper{
-        border-top: 1px solid $clr-d-gray;
+        border-top: 1px solid rgb(117, 117, 117, .2);
     }
 
     &__content{
@@ -69,8 +69,8 @@
 
     @include mediaQuery($break-lg){
         &__content{
-            display: flex;
-            // align-items: start;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         }
 
         &__item{

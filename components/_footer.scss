@@ -3,7 +3,7 @@
         ul{
             display: flex;
             align-items: center;
-            border-top: 1px solid $clr-dark;
+            border-top: 1px solid rgb(117, 117, 117, .2);
             padding: 5rem 0;
 
             li{
@@ -62,7 +62,7 @@
 
                 li{
                     &:not(:first-child){
-                        border-left: 2px solid $clr-dark;
+                        border-left: 2px solid $clr-gray;
 
                         a{
                             padding: 0 2rem;
