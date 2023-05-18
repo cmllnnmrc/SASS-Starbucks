@@ -8,6 +8,13 @@
 
             li{
                 margin-right: 2rem;
+                padding: 1.5rem .6rem;
+
+                &:hover{
+                    border-radius: 5rem;
+                    background: rgb(117, 117, 117, .3);
+                }
+
                 a{
                     color: $clr-light;
                     background: $clr-dark;
