@@ -1,27 +1,35 @@
 .links{
-    padding: 5rem 0;
+    padding-top: 5rem;
 
     &__wrapper{
         border-top: 1px solid $clr-d-gray;
     }
 
-    &__item{
-        margin-bottom: 5rem;
+    &__content{
         max-width: 150rem;
         margin: 0 auto;
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
+    }
+
+    &__item{
+        margin-bottom: 5rem;
 
         &:first-child{
             margin-top: 3rem;
         }
 
         h4{
-            color: $clr-d-gray;
+            color: #1F1F1E;
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 2rem;
             cursor: pointer;
+
+            span{
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
 
             i{
                 transition: .5s ease;
@@ -52,49 +60,51 @@
                     }
                 }
                 a{
-                    color: $clr-dark;
-                    font-size: 1.5rem;
+                    color: $clr-gray;
+                    font-size: 1.3rem;
                 }
             }
         }
     }
 
-    // @include mediaQuery($break-lg){
-    //     &__wrapper{
-    //         display: grid;
-    //         grid-template-columns: .5fr 2.5fr 1.5fr;
-    //     }
+    @include mediaQuery($break-lg){
+        &__content{
+            display: flex;
+            // align-items: start;
+        }
 
-    //     &__drop{
-    //         margin: 0;
-    //         display: flex;
-    //         align-items: start;
-    //         gap: 10rem;
+        &__item{
+            padding-right: 8rem;
+            padding-top: 3rem;
+            margin-bottom: 0;
+            
+            &:first-child{
+                margin: 0;
+            }
 
-    //         &__item{
-    //             &:nth-child(2){
-    //                 margin: 0;
-    //             }
 
-    //             h4{
-    //                 pointer-events: none;
+            h4{
+                pointer-events: none;
 
-    //                 i{
-    //                     display: none;
-    //                 }
-    //             }
+                span{
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
 
-    //             ul{
-    //                 max-height: 25rem;
-    //                 margin: 1rem 0;
-    //             }
-    //         }
-    //     }
+                i{
+                    display: none;
+                }
+            }
 
-    //     &__social{
-    //         ul{
-    //             justify-content: flex-end;
-    //         }
-    //     }
-    // }
+            ul{
+                max-height: 50rem;
+
+                li{
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
